@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Page</title>
+    <title>Flexbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Merriweather" rel="stylesheet">
     <style>
         body{
-            background-color: lightgoldenrodyellow;
-            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
         }
-        .error-wrapper{
+        .container{
+            margin: 0;
+            height: calc(100vh - 20px);
+            width: calc(100vw - 20px);
+            border: 10px solid red;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* esta linea ciertamente no crea ningun cambio en las imagenes, porq es la div img-blocks la que debe hacer esos cambios en las imagenes, ya que es quien las contiene, con lo cual  para justificar las imagenes en el centro de la pantalla (en horizontal) debo... */
             align-items: center;
-            height: 100vh;
+        }
+
+        .container > .img-blocks{
+            display: flex;    /*... hacer esto. Simplemente decirle q tambien es una div flex y que la direccion que por defecto en flexbox es en fila, la quiero en columna, de esta forma centra el contenido en la columna central*/
             flex-direction: column;
-        }
-        .error-wrapper > .error-heading{
-            margin-bottom: 42px;
-        }
-        img{
-            width: 50%;
         }
     </style>
 </head>
 <body>
-    <div class="error-wrapper">
-        <div class="error-heading">
-            <h2>Yikes... Who knows when that page will be available, would you like to try another.</h2>
+    <div class="container">
+        <div class="img-blocks">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
         </div>
-        <img src="images/tbot.png" alt="">
     </div>
 </body>
 </html>
