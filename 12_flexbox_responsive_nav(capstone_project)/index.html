@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Capstone Project: Build a Responsive Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fbebf5856f.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+        }
+        .navbar{
+            width: 100vw;
+            height: 60px; /**/
+            background-color: rgb(90, 90, 141);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-toggle{
+            display: none;
+        }
+        .navbar-brand{
+            padding: 10px 50px;
+            cursor: pointer;
+        }
+        .navbar-links{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        
+        .navbar-link{
+            padding: 10px 20px;
+            background-color: rgb(52, 52, 97);
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-link:hover{
+            color: rgb(90, 90, 141);
+            background-color: white;
+            cursor: pointer;
+        }
+        .navbar-links > .link3{
+           align-self: flex-end;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="navbar-brand">
+                MyName
+            </div>
+            <div class="navbar-links">
+                <div class="navbar-link">
+                    Link 1
+                </div>
+                <div class="navbar-link">
+                    Link 2
+                </div>
+                <div class="navbar-link link3">
+                    Link 3
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

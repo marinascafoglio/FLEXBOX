@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Using Justify Content with Multiple Flex Containers
+    </title>
+
+    <style>
+        /* display: flex; ---> Se asigna a los contenedores que serán flex, y los elementos que están en su interior son elementos flex. Es decir, hay una relación padre-hijo */
+        
+        /*Aquí hay que saber que podemos tener contenedores anidados, y todos ellos ser display flex y tener elementos flex, a cada uno se le puede asignar su flex-direction y asi alineas los elementos a lo largo y ancho de la pagina*/
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0;
+            height: calc(100vh - 20px);
+            width: calc(100vw - 20px);
+            border: 10px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container > .img_blocks {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center;
+        }    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img_blocks">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+            <img src="https://source.unsplash.com/random/150x150" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

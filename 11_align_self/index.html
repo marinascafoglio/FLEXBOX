@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Self in Flexbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+    <style>
+        /* align-self:;  alinea el unico elemento al que nos referimos, de forma independiente al resto, normalmente hará falta un selector de clase */
+
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0;
+            height: calc(100vh - 20px);
+            width: calc(100vw - 20px);
+            border: 10px solid red;
+            display: flex;
+        }
+
+        img {
+            margin: 10px;
+            height: 90px;
+            width: 150px;
+        }
+        .img2{
+            align-self: flex-end;
+        }
+        .img3{
+            align-self: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+            <img class="img1" src="../images/1.jpg" alt="">
+            <img class="img2" src="../images/2.jpg" alt="">
+            <img class="img3" src="../images/3.jpg" alt="">
+    </div>
+</body>
+</html>
